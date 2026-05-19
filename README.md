@@ -61,12 +61,48 @@ Feature importance analysis shows that:
 
 are the most influential factors in determining house prices.
 
+---
+
+## Installation & Usage
+
+### Setup
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/chwe218/second_house_price_pred_model.git
+   cd second_house_price_pred_model
+   ```
+
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+### Make Predictions
+Run the interactive prediction tool:
+```bash
+python predict.py
+```
+
+You'll be prompted to enter:
+- Area (㎡)
+- Number of rooms, halls, toilets
+- Year built
+- Renovation type (精装 / 简装 / 毛坯)
+- District (e.g., 浦东, 闵行, 徐汇, etc.)
+- Floor location (低楼层 / 中楼层 / 高楼层)
+
+The model will return an estimated price in **万元** (10,000 CNY).
+
+### Training (For Learning)
+To retrain the model on the dataset:
+```bash
+python price_pred.py
+```
 
 ---
 
-## Usage
-
-- For learning 
-
 ## Improvements
-- The model used can still be optimized(a lot...)
+- The model can still be optimized (hyperparameter tuning, feature engineering, try other algorithms)
+- Cross-validation for more robust evaluation
+- Add outlier detection and handling
+- Test with other models (XGBoost, Gradient Boosting)
